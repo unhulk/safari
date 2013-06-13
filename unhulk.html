@@ -1,0 +1,29 @@
+<!--
+ *
+ * Unhulk 1.0
+ * Unhulking FilmCritHULK, and possibly others as well.
+ *
+ * by Pat Rafferty <twitter.com/prr>
+ * <http://raffertyesque.com/unhulk>
+ *
+ * I got sick of reading FilmCritHULK's amazing writing in uppercase or going
+ * through the hassle of converting it on some third-party website... so I made
+ * a Safari extension and now his amazing writing is all in lowercase.
+ *
+ * I guess that's an improvement?
+ *
+ * I may flesh this out in the future, but for now, I'm gonna go read some Hulk.
+ *
+ * Hulk icon art by: Mattahan (Paul Davey)
+ * URL: http://mattahan.deviantart.com
+ * 
+-->
+
+<script type="text/javascript">
+function unhulk(event) {
+	if(event.command === "un-hulk") {
+		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("hulkunsmash");
+	}
+}
+safari.application.addEventListener("command", unhulk, true);
+</script>
